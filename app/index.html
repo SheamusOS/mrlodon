@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicGraph SVG Node Graph</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="toolbar">
+        <div class="toolbar__title">MusicGraph</div>
+        <div class="toolbar__actions">
+          <button id="undo-btn" type="button">Undo</button>
+          <button id="redo-btn" type="button">Redo</button>
+        </div>
+      </header>
+      <main class="workspace">
+        <section class="canvas">
+          <svg id="graph" role="img" aria-label="Node graph"></svg>
+        </section>
+        <aside class="inspector">
+          <h2>Selection</h2>
+          <div class="panel" id="edge-panel" hidden>
+            <div class="panel__title">Edge Weight</div>
+            <input
+              id="weight-slider"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.5"
+            />
+            <div class="panel__value" id="weight-value">0.50</div>
+          </div>
+          <div class="panel panel--hint">
+            <div class="panel__title">Hints</div>
+            <ul>
+              <li>Drag nodes to reposition.</li>
+              <li>Drag from output ports to input ports to connect.</li>
+              <li>Select edges to adjust weight.</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
