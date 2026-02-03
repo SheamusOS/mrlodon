@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    { "id": "node-1", "type": "sample", "label": "Amen Chop", "x": 120, "y": 120 },
+    { "id": "node-2", "type": "filter", "label": "Bandpass", "x": 380, "y": 180 },
+    { "id": "node-3", "type": "delay", "label": "Dub Echo", "x": 640, "y": 220 },
+    { "id": "node-4", "type": "mixer", "label": "Resample", "x": 380, "y": 360 },
+    { "id": "node-5", "type": "output", "label": "Master Out", "x": 700, "y": 420 }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "from": { "node": "node-1", "port": "out" },
+      "to": { "node": "node-2", "port": "in" },
+      "weight": 0.72
+    },
+    {
+      "id": "edge-2",
+      "from": { "node": "node-2", "port": "out" },
+      "to": { "node": "node-3", "port": "in" },
+      "weight": 0.58
+    },
+    {
+      "id": "edge-3",
+      "from": { "node": "node-1", "port": "out" },
+      "to": { "node": "node-4", "port": "in-a" },
+      "weight": 0.46
+    },
+    {
+      "id": "edge-4",
+      "from": { "node": "node-3", "port": "out" },
+      "to": { "node": "node-4", "port": "in-b" },
+      "weight": 0.61
+    },
+    {
+      "id": "edge-5",
+      "from": { "node": "node-4", "port": "out" },
+      "to": { "node": "node-5", "port": "in" },
+      "weight": 0.88
+    }
+  ]
+}

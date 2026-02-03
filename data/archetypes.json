@@ -1,0 +1,43 @@
+{
+  "archetypes": [
+    {
+      "id": "sample",
+      "label": "Sample Player",
+      "ports": [
+        { "id": "out", "label": "Out", "kind": "output" }
+      ]
+    },
+    {
+      "id": "filter",
+      "label": "Filter",
+      "ports": [
+        { "id": "in", "label": "In", "kind": "input" },
+        { "id": "out", "label": "Out", "kind": "output" }
+      ]
+    },
+    {
+      "id": "delay",
+      "label": "Delay",
+      "ports": [
+        { "id": "in", "label": "In", "kind": "input" },
+        { "id": "out", "label": "Out", "kind": "output" }
+      ]
+    },
+    {
+      "id": "mixer",
+      "label": "Mixer",
+      "ports": [
+        { "id": "in-a", "label": "A", "kind": "input" },
+        { "id": "in-b", "label": "B", "kind": "input" },
+        { "id": "out", "label": "Out", "kind": "output" }
+      ]
+    },
+    {
+      "id": "output",
+      "label": "Output",
+      "ports": [
+        { "id": "in", "label": "In", "kind": "input" }
+      ]
+    }
+  ]
+}
